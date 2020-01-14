@@ -2,6 +2,7 @@ require 'tiny-presto/version'
 require 'tiny-presto/cluster'
 
 require 'singleton'
+require 'presto-client'
 
 module TinyPresto
   class TinyPresto
