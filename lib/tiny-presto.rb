@@ -19,7 +19,7 @@ module TinyPresto
         begin
           @client.run('show schemas')
           break
-        rescue StandardError => e
+        rescue StandardError => _
           # Waiting for the cluster is launched
           sleep(1)
         end
