@@ -1,4 +1,4 @@
-# tiny-presto
+# tiny-presto [![Actions Status](https://github.com/Lewuathe/tiny-presto/workflows/test/badge.svg)](https://github.com/Lewuathe/tiny-presto/actions) ![Gem](https://img.shields.io/gem/v/tiny-presto) ![Gem](https://img.shields.io/gem/dt/tiny-presto)
 
 Tiny [Presto](https://prestosql.io/) cluster to check the compatibility of query result by using the specific Presto version.
 
