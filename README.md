@@ -37,3 +37,9 @@ To check the result consistency, `verify` method is available.
 result = TinyPresto.verify('show schemas', [["default"], ["information_schema"]])
 # result is true if the returned value by the query matched with the given expected result.
 ```
+
+To ensure to delete the tiny-presto cluster, make sure to call `ensure_stop` before exiting.
+
+```ruby
+TinyPresto.ensure_stop
+```
