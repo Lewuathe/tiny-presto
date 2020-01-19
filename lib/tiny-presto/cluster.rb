@@ -1,6 +1,8 @@
 require 'docker-api'
 
 module TinyPresto
+  # Represents a Presto cluster
+  #
   class Cluster
     def initialize(url, tag = 'latest')
       @url = url
@@ -8,6 +10,7 @@ module TinyPresto
       @image_name = "prestosql/presto:#{@tag}"
     end
 
+    # Launch Presto cluster running on Docker container
     def run
       # Ensure to pull the specified image
       Docker::Image.create('fromImage' => @image_name)
@@ -27,6 +30,7 @@ module TinyPresto
       @container
     end
 
+    # Kill Presto cluster process
     def stop
       @container.stop
     end

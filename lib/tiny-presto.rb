@@ -5,6 +5,7 @@ require 'singleton'
 require 'presto-client'
 
 module TinyPresto
+  # Singleton object representing a Presto cluster running in the local machine.
   class TinyPresto
     include Singleton
 
@@ -31,18 +32,21 @@ module TinyPresto
     end
   end
 
+  # Run the given SQL.
   def self.run(sql)
     presto = TinyPresto.instance
     _, rows = presto.client.run(sql)
     rows
   end
 
+  # Run the given SQL and verify the result.
   def self.verify(sql, expected_result)
     presto = TinyPresto.instance
     _, rows = presto.client.run(sql)
     rows == expected_result
   end
 
+  # Make sure to stop the cluster.
   def self.ensure_stop
     presto = TinyPresto.instance
     presto.stop

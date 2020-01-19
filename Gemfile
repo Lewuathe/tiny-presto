@@ -8,6 +8,7 @@ gem 'docker-api'
 gem 'presto-client'
 gem 'rake'
 gem 'rubocop'
+gem 'rdoc'
 
 group :development, :test do
   gem 'rspec'
