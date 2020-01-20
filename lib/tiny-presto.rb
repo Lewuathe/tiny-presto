@@ -33,6 +33,9 @@ module TinyPresto
   end
 
   # Run the given SQL.
+  #
+  #   TinyPresto.run("show schemas")
+  #
   def self.run(sql)
     presto = TinyPresto.instance
     _, rows = presto.client.run(sql)
@@ -40,6 +43,9 @@ module TinyPresto
   end
 
   # Run the given SQL and verify the result.
+  #
+  #  TinyPresto.verify("show schemas", [["default"], ["information_schema"]])
+  #  # => return true
   def self.verify(sql, expected_result)
     presto = TinyPresto.instance
     _, rows = presto.client.run(sql)
@@ -47,6 +53,9 @@ module TinyPresto
   end
 
   # Make sure to stop the cluster.
+  #
+  #  TinyPresto.ensure_stop
+  #
   def self.ensure_stop
     presto = TinyPresto.instance
     presto.stop
