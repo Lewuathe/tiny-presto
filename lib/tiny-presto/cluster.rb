@@ -1,11 +1,12 @@
+# frozen_string_literal: true
+
 require 'docker-api'
 
 module TinyPresto
   # Represents a Presto cluster
   #
   class Cluster
-    def initialize(url, tag = 'latest')
-      @url = url
+    def initialize(tag = 'latest')
       @tag = tag
       @image_name = "prestosql/presto:#{@tag}"
     end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require File.expand_path 'lib/tiny-presto/version', File.dirname(__FILE__)
 
 Gem::Specification.new do |gem|
@@ -9,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.description   = 'Wrapper for Lightweight Presto Cluster'
   gem.summary       = 'For Presto functionality testing'
   gem.homepage      = 'https://github.com/Lewuathe/tiny-presto'
-  gem.license       = 'Apache 2.0'
+  gem.license       = 'Apache-2.0'
 
   gem.files         = `git ls-files`.split($OUTPUT_RECORD_SEPARATOR)
   gem.executables   = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }

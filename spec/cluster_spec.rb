@@ -1,19 +1,19 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe TinyPresto::Cluster do
   describe 'cluster' do
     before(:all) do
-      @cluster = TinyPresto::Cluster.new('localhost')
+      @cluster = TinyPresto::Cluster.new
       @container = @cluster.run
       @client = Presto::Client.new(server: 'localhost:8080', catalog: 'memory', user: 'tiny-user', schema: 'default')
       loop do
-        begin
-          @client.run('show schemas')
-          break
-        rescue StandardError => exception
-          puts 'Waiting for cluster ready...'
-          sleep(3)
-        end
+        @client.run('show schemas')
+        break
+      rescue StandardError => exception
+        puts 'Waiting for cluster ready...'
+        sleep(3)
       end
       puts 'Cluster is ready'
     end
