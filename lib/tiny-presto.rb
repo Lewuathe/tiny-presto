@@ -24,7 +24,8 @@ module TinyPresto
         # TODO: Remove after presto-client-ruby supports Trino
         http_headers: {
           'X-Trino-User' => 'tiny-user',
-          'X-Trino-Catalog' => 'memory'
+          'X-Trino-Catalog' => 'memory',
+          'X-Trino-Schema' => 'default'
         })
       loop do
         @client.run('show schemas')
