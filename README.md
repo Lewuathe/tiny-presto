@@ -1,6 +1,8 @@
 # tiny-presto [![Actions Status](https://github.com/Lewuathe/tiny-presto/workflows/test/badge.svg)](https://github.com/Lewuathe/tiny-presto/actions) ![Gem](https://img.shields.io/gem/v/tiny-presto) ![Gem](https://img.shields.io/gem/dt/tiny-presto)
 
-Tiny [Presto](https://prestosql.io/) cluster to check the compatibility of query result by using the specific Presto version.
+Tiny [Trino](https://trino.io/) cluster to check the compatibility of query result by using the specific Trino version.
+
+**NOTE: The brand name of [Presto was migrated to Trino](https://trino.io/blog/2020/12/27/announcing-trino.html). Although the internal docker image used in tiny-presto was also migrated to [Trino](https://hub.docker.com/r/trinodb/trino), we keep the package name `tiny-presto` to avoid the installation trouble.**
 
 # Install
 
