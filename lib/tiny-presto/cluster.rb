@@ -6,9 +6,9 @@ module TinyPresto
   # Represents a Presto cluster
   #
   class Cluster
-    def initialize(tag = 'latest')
+    def initialize(image = 'trinodb/trino', tag = 'latest')
       @tag = tag
-      @image_name = "prestosql/presto:#{@tag}"
+      @image_name = "#{image}:#{@tag}"
     end
 
     # Launch Presto cluster running on Docker container
