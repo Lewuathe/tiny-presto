@@ -16,7 +16,16 @@ module TinyPresto
     def initialize
       @cluster = Cluster.new
       @cluster.run
-      @client = Presto::Client.new(server: 'localhost:8080', catalog: 'memory', user: 'tiny-user', schema: 'default')
+      @client = Presto::Client.new(
+        server: 'localhost:8080',
+        catalog: 'memory',
+        user: 'tiny-user',
+        schema: 'default',
+        # TODO: Remove after presto-client-ruby supports Trino
+        http_headers: {
+          'X-Trino-User' => 'tiny-user',
+          'X-Trino-Catalog' => 'memory'
+        })
       loop do
         @client.run('show schemas')
         break
