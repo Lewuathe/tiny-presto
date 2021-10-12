@@ -22,7 +22,6 @@ Gem::Specification.new do |gem|
   gem.required_ruby_version = '>= 2.4.0'
 
   gem.add_dependency 'docker-api', ['~> 1.34.0']
-  gem.add_dependency 'faraday', ['~> 0.12']
 
   gem.add_development_dependency 'rake', ['~> 13.0.0']
   gem.add_development_dependency 'rspec', ['~> 3.9.0']
