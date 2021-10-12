@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 gem 'docker-api'
-gem 'presto-client'
+gem 'trino-client'
 gem 'rake'
 gem 'rdoc'
 gem 'rubocop'

@@ -4,7 +4,7 @@ require 'tiny-presto/version'
 require 'tiny-presto/cluster'
 
 require 'singleton'
-require 'presto-client'
+require 'trino-client'
 
 module TinyPresto
   # Singleton object representing a Presto cluster running in the local machine.
@@ -16,7 +16,7 @@ module TinyPresto
     def initialize
       @cluster = Cluster.new
       @cluster.run
-      @client = Presto::Client.new(
+      @client = Trino::Client.new(
         server: 'localhost:8080',
         catalog: 'memory',
         user: 'tiny-user',
@@ -91,7 +91,7 @@ module TinyPresto
   def self.run_with_retry(sql, max_retry = 3)
     max_retry.times do
       return run(sql)
-    rescue Presto::Client::PrestoQueryError => e
+    rescue Trino::Client::PrestoQueryError => e
       # Cluster may be in the initialization phase.
       raise unless e.message.match?(/^No nodes available to run query/)
 

@@ -7,7 +7,7 @@ RSpec.describe TinyPresto::Cluster do
     before(:all) do
       @cluster = TinyPresto::Cluster.new
       @container = @cluster.run
-      @client = Presto::Client.new(
+      @client = Trino::Client.new(
         server: 'localhost:8080',
         catalog: 'memory',
         user: 'tiny-user',
