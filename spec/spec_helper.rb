@@ -11,4 +11,4 @@ rescue Bundler::BundlerError => e
 end
 
 require 'tiny-presto'
-require 'presto-client'
+require 'trino-client'
