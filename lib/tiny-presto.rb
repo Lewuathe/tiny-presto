@@ -91,7 +91,7 @@ module TinyPresto
   def self.run_with_retry(sql, max_retry = 3)
     max_retry.times do
       return run(sql)
-    rescue Trino::Client::PrestoQueryError => e
+    rescue Trino::Client::TrinoQueryError => e
       # Cluster may be in the initialization phase.
       raise unless e.message.match?(/^No nodes available to run query/)
 
