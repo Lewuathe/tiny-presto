@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version = '>= 2.7.0'
 
-  gem.add_dependency 'docker-api', ['>= 1.34.0', '< 3.0']
+  gem.add_dependency 'docker-api', ['>= 2.0.0', '< 3.0']
   gem.add_dependency 'trino-client'
 
   gem.add_development_dependency 'rake', ['~> 13.0.0']
