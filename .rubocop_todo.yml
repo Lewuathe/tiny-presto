@@ -5,7 +5,8 @@
 # one by one as the offenses are removed from the code base.
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
-
+AllCops:
+  NewCops: disable
 # Offense count: 1
 # Configuration parameters: Include.
 # Include: **/*.gemspec
@@ -56,5 +57,5 @@ Style/Documentation:
 # Offense count: 5
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
-Metrics/LineLength:
+Layout/LineLength:
   Max: 117
