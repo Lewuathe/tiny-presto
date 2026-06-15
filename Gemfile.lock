@@ -82,7 +82,7 @@ GEM
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
     uri (1.1.1)
-    zlib (3.2.1)
+    zlib (3.2.3)
 
 PLATFORMS
   ruby
