@@ -1,4 +1,7 @@
-# tiny-presto [![Run unit tests](https://github.com/Lewuathe/tiny-presto/actions/workflows/ruby.yml/badge.svg)](https://github.com/Lewuathe/tiny-presto/actions/workflows/ruby.yml) ![Gem](https://img.shields.io/gem/v/tiny-presto) ![Gem](https://img.shields.io/gem/dt/tiny-presto)
+# tiny-presto 
+[![Run unit tests](https://github.com/Lewuathe/tiny-presto/actions/workflows/ruby.yml/badge.svg)](https://github.com/Lewuathe/tiny-presto/actions/workflows/ruby.yml) 
+[![Gem Version](https://badge.fury.io/rb/tiny-presto.svg)](https://badge.fury.io/rb/tiny-presto)
+![Gem](https://img.shields.io/gem/dt/tiny-presto)
 
 Tiny [Trino](https://trino.io/) cluster to check the compatibility of query result by using the specific Trino version.
 
